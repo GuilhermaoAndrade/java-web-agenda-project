@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.agenda.model.Pessoa;
+import com.agenda.service.CadastraUsuarioService;
 
 public class CadastraUsuarioServlet extends HttpServlet {
 	@Override
@@ -19,7 +20,11 @@ public class CadastraUsuarioServlet extends HttpServlet {
 		pessoa.setEndereco(request.getParameter("endereco"));
 		pessoa.setTelefone(request.getParameter("telefone"));
 		pessoa.setEmail(request.getParameter("email"));
-
+		
+		CadastraUsuarioService service = new CadastraUsuarioService();
+		
+		service.Cadastro(pessoa);
+		
 		/*
 		 * request.getParameter("nome");
 		 * System.out.println(request.getParameter("nome"));
