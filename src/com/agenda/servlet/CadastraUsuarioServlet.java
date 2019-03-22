@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.agenda.model.Pessoa;
 import com.agenda.service.CadastraUsuarioService;
+import com.agenda.service.PessoaDAO;
 
 public class CadastraUsuarioServlet extends HttpServlet {
 	@Override
@@ -24,6 +25,15 @@ public class CadastraUsuarioServlet extends HttpServlet {
 		CadastraUsuarioService service = new CadastraUsuarioService();
 		
 		service.Cadastro(pessoa);
+		
+		PessoaDAO dao = new PessoaDAO();
+		
+		dao.Pessoa(pessoa);
+		
+		
+		
+		
+		
 		
 		/*
 		 * request.getParameter("nome");

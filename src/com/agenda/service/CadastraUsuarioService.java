@@ -15,4 +15,6 @@ public class CadastraUsuarioService
 		System.out.println(pessoa.getEmail());
 		System.out.println(pessoa.getTelefone());
 	}
+	
+	
 }
